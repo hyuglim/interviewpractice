@@ -1,6 +1,11 @@
 # given number of pairs of parentheses
 # return all valid pairs 
 
+# Runtime analysis. n is 2 * num a.k.a. number of chars in string
+# is_valid_pairs: O(n) 
+# get_all_permutations: O(n! * n). there are n! perms, and substring takes O(n) each iter
+# get_valid_parentheses: O(n! * n^2) = for each permutation, check run is_valid_pair
+
 def get_valid_parentheses(num):
     paren_combinations = []
     get_all_permutations("", "()" * num, paren_combinations)
