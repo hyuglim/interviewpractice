@@ -1,0 +1,8 @@
+def urlify(substring):
+   num_spaces = 0
+   for i in substring:
+        if i == ' ':
+            num_spaces += 1
+   
+
+print urlify(['a',' '])
